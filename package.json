@@ -1,0 +1,22 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/MaximePoitoux/ohmyfood.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaximePoitoux/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/MaximePoitoux/ohmyfood#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}
