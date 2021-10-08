@@ -1,0 +1,160 @@
+// Reset
+@import "libs/reset.scss";
+
+// https://stackoverflow.com/questions/4872592/use-multiple-font-face-rules-in-css
+@font-face {
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Shrikhand";
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+}
+
+// Colors
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+$primary-color-hover: rgba(147, 86, 220, 0.2);
+
+// Backgrounds
+$primary-background: #f6f6f6;
+$secondary-background: #eaeaea;
+$tertiary-background: #353535;
+
+// TEXT COLOR
+$primary-text-color: black;
+$secondary-text-color: #7f8c8d;
+$tertiary-text-color: white;
+
+// SEMANTIC TAGS
+body {
+  background: white;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(2) {
+  padding: 20px;
+}
+
+section:nth-of-type(2) {
+  background-color: $primary-background;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.6em;
+}
+
+p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1em;
+}
+
+// HEADER
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+
+  .header__logo {
+    width: 60%;
+  }
+}
+
+// LOCATION
+.location {
+  background-color: $secondary-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  .location__icon {
+    margin-right: 10px;
+  }
+
+  .location__text {
+  }
+}
+
+// INTRODUCTION
+.introduction {
+  padding: 20px;
+  background-color: $primary-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .introduction__title {
+    text-align: center;
+  }
+  .introduction__text {
+    text-align: center;
+    color: $secondary-text-color;
+    margin: 20px 0;
+  }
+  .introduction__btn {
+    cursor: pointer;
+    padding: 13px;
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    color: $tertiary-text-color;
+    background-image: linear-gradient(
+      to bottom,
+      #ff79da,
+      #e86edb,
+      #cf64dc,
+      #b35cdc,
+      #9356dc
+    );
+  }
+}
+
+// TAB
+.tab {
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: $primary-background;
+  padding: 22px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: $primary-color-hover;
+  }
+  .tab__badge {
+    position: absolute;
+    left: -10px;
+    height: 25px;
+    width: 25px;
+    color: $tertiary-text-color;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .tab__icon {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    color: $tertiary-background;
+    font-size: 1.4em;
+  }
+  .tab__text {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    color: $primary-text-color;
+  }
+}

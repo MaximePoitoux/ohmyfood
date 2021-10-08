@@ -1,0 +1,200 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+@font-face {
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Shrikhand";
+}
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+}
+body {
+  background: white;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(2) {
+  padding: 20px;
+}
+
+section:nth-of-type(2) {
+  background-color: #f6f6f6;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.6em;
+}
+
+p {
+  font-family: "Roboto", "sans-serif";
+  font-size: 1em;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.header .header__logo {
+  width: 60%;
+}
+
+.location {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.location .location__icon {
+  margin-right: 10px;
+}
+.introduction {
+  padding: 20px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.introduction .introduction__title {
+  text-align: center;
+}
+.introduction .introduction__text {
+  text-align: center;
+  color: #7f8c8d;
+  margin: 20px 0;
+}
+.introduction .introduction__btn {
+  cursor: pointer;
+  padding: 13px;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  color: white;
+  background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+}
+
+.tab {
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-color: #f6f6f6;
+  padding: 22px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.tab:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.tab .tab__badge {
+  position: absolute;
+  left: -10px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab .tab__icon {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  color: #353535;
+  font-size: 1.4em;
+}
+.tab .tab__text {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
