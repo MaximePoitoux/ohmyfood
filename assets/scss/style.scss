@@ -167,6 +167,7 @@ p {
 
   &:focus {
     background-color: lighten($primary-color, 32);
+    outline: none;
     .tab__icon {
       color: $primary-color;
     }

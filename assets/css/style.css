@@ -190,6 +190,7 @@ p {
 }
 .tab:focus {
   background-color: #e9ddf8;
+  outline: none;
 }
 .tab:focus .tab__icon {
   color: #9356dc;
