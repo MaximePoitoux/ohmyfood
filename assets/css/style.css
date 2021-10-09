@@ -128,12 +128,12 @@ p {
   width: 60%;
 }
 
-.tab {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+.card, .tab {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.tab:hover {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.card:hover, .tab:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 .location {
@@ -177,7 +177,7 @@ p {
 .tab {
   cursor: pointer;
   position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: 0.3s;
   background-color: #f6f6f6;
   padding: 22px 0;
   margin: 25px 0;
