@@ -1,6 +1,9 @@
-// Reset
+// RESET
 @import "libs/reset.scss";
+@import "libs/mixins.scss";
+@import "libs/responsive.scss";
 
+// GOOGLE FONT
 // https://stackoverflow.com/questions/4872592/use-multiple-font-face-rules-in-css
 @font-face {
   src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
@@ -12,22 +15,25 @@
   font-family: "Roboto";
 }
 
-// Colors
+// COLORS
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
-$primary-color-hover: rgba(147, 86, 220, 0.2);
+// $primary-color-hover: rgba(147, 86, 220, 0.2);
 
-// Backgrounds
+// BACKGROUNDS
 $primary-background: #f6f6f6;
 $secondary-background: #eaeaea;
 $tertiary-background: #353535;
 
-// TEXT COLOR
+// TEXT COLORS
 $primary-text-color: black;
 $secondary-text-color: #7f8c8d;
 $tertiary-text-color: white;
+
+// PADDING
+$p-20: 20px;
 
 // SEMANTIC TAGS
 body {
@@ -64,13 +70,23 @@ p {
   }
 }
 
+// HERITAGE @extend
+%shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+%shadow-hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
 // LOCATION
 .location {
   background-color: $secondary-background;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: $p-20;
+
   .location__icon {
     margin-right: 10px;
   }
@@ -81,23 +97,26 @@ p {
 
 // INTRODUCTION
 .introduction {
-  padding: 20px;
+  padding: $p-20;
   background-color: $primary-background;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   .introduction__title {
     text-align: center;
   }
+
   .introduction__text {
     text-align: center;
     color: $secondary-text-color;
     margin: 20px 0;
   }
+
   .introduction__btn {
     cursor: pointer;
-    padding: 13px;
+    padding: 16px;
     margin: 20px;
     border: none;
     border-radius: 25px;
@@ -116,21 +135,29 @@ p {
 
 // TAB
 .tab {
+  @extend %shadow;
   cursor: pointer;
   position: relative;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   background-color: $primary-background;
   padding: 22px 0;
   margin: 25px 0;
   border-radius: 25px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+
   &:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    background-color: $primary-color-hover;
+    @extend %shadow-hover;
+    background-color: lighten($primary-color, 32);
   }
+
+  &:focus {
+    background-color: lighten($primary-color, 32);
+    .tab__icon {
+      color: $primary-color;
+    }
+  }
+
   .tab__badge {
     position: absolute;
     left: -10px;
@@ -144,6 +171,7 @@ p {
     justify-content: center;
     align-items: center;
   }
+
   .tab__icon {
     width: 30%;
     display: flex;
@@ -151,6 +179,7 @@ p {
     color: $tertiary-background;
     font-size: 1.4em;
   }
+
   .tab__text {
     width: 70%;
     display: flex;
@@ -158,3 +187,12 @@ p {
     color: $primary-text-color;
   }
 }
+
+// @media #{$tablet} {
+// }
+
+// @media #{$desktop} {
+// }
+
+// @media #{xl-desktop} {
+// }
