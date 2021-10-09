@@ -103,7 +103,7 @@ GOOGLE FONT
 VARIABLES SASS
 ========================================================================== */
 /* ========================================================================== 
-HERITAGE (@extend)
+HERITAGE (@extend) SASS
 ========================================================================== */
 .card, .tab {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -111,6 +111,33 @@ HERITAGE (@extend)
 
 .card:hover, .tab:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================================================== 
+LOOPS SASS
+========================================================================== */
+.introduction--lightgrey,
+.location--lightgrey,
+.tab--lightgrey,
+.restaurants--lightgrey,
+.footer--darkgrey {
+  background-color: #f6f6f6;
+}
+
+.introduction--grey,
+.location--grey,
+.tab--grey,
+.restaurants--grey,
+.footer--darkgrey {
+  background-color: #eaeaea;
+}
+
+.introduction--darkgrey,
+.location--darkgrey,
+.tab--darkgrey,
+.restaurants--darkgrey,
+.footer--darkgrey {
+  background-color: #353535;
 }
 
 /* ========================================================================== 
@@ -123,10 +150,6 @@ body {
 section:nth-of-type(2),
 section:nth-of-type(3) {
   padding: 20px;
-}
-
-section:nth-of-type(3) {
-  background-color: #f6f6f6;
 }
 
 h1 {
@@ -160,7 +183,6 @@ HEADER
 LOCATION
 ========================================================================== */
 .location {
-  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,7 +197,6 @@ INTRODUCTION
 ========================================================================== */
 .introduction {
   padding: 20px;
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -207,7 +228,6 @@ TAB
   cursor: pointer;
   position: relative;
   transition: 0.3s;
-  background-color: #f6f6f6;
   padding: 22px 0;
   margin: 25px 0;
   border-radius: 25px;
@@ -241,7 +261,6 @@ TAB
   width: 30%;
   display: flex;
   justify-content: center;
-  color: #353535;
   font-size: 1.4em;
 }
 .tab .tab__text {
@@ -308,7 +327,6 @@ FOOTER
 ========================================================================== */
 .footer {
   padding: 20px;
-  background-color: #353535;
 }
 .footer .footer__logo-container {
   width: 30%;

@@ -39,18 +39,19 @@ $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $tertiary-color: #99e2d0;
 
-// backgrounds
-$primary-background: #f6f6f6;
-$secondary-background: #eaeaea;
-$tertiary-background: #353535;
-
 // text-colors
 $primary-text-color: black;
-$secondary-text-color: #7f8c8d;
-$tertiary-text-color: white;
+$secondary-text-color: white;
+
+// backgrounds
+$bg-colors: (
+  "lightgrey": #f6f6f6,
+  "grey": #eaeaea,
+  "darkgrey": #353535,
+);
 
 // linear-gradient
-$linear-gradient: linear-gradient(
+$linear-gradient-btn: linear-gradient(
   to bottom,
   #ff79da,
   #e86edb,
@@ -59,11 +60,20 @@ $linear-gradient: linear-gradient(
   #9356dc
 );
 
+// $linear-gradient-heart: linear-gradient(
+//   to bottom,
+//   #ff79da,
+//   #e86edb,
+//   #cf64dc,
+//   #b35cdc,
+//   #9356dc
+// );
+
 // padding
 $p-20: 20px;
 
 /* ========================================================================== 
-HERITAGE (@extend)
+HERITAGE (@extend) SASS
 ========================================================================== */
 %shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -71,6 +81,19 @@ HERITAGE (@extend)
 
 %shadow-hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================================================== 
+LOOPS SASS
+========================================================================== */
+@each $color, $hex in $bg-colors {
+  .introduction--#{$color},
+  .location--#{$color},
+  .tab--#{$color},
+  .restaurants--#{$color},
+  .footer--darkgrey {
+    background-color: $hex;
+  }
 }
 
 /* ========================================================================== 
@@ -83,10 +106,6 @@ body {
 section:nth-of-type(2),
 section:nth-of-type(3) {
   padding: 20px;
-}
-
-section:nth-of-type(3) {
-  background-color: $primary-background;
 }
 
 h1 {
@@ -120,7 +139,6 @@ HEADER
 LOCATION
 ========================================================================== */
 .location {
-  background-color: $secondary-background;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +153,6 @@ INTRODUCTION
 ========================================================================== */
 .introduction {
   padding: $p-20;
-  background-color: $primary-background;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,8 +172,8 @@ INTRODUCTION
     border: none;
     border-radius: 25px;
     font-size: 1em;
-    color: $tertiary-text-color;
-    background-image: $linear-gradient;
+    color: $secondary-text-color;
+    background-image: $linear-gradient-btn;
   }
 }
 
@@ -168,7 +185,6 @@ TAB
   cursor: pointer;
   position: relative;
   transition: 0.3s;
-  background-color: $primary-background;
   padding: 22px 0;
   margin: 25px 0;
   border-radius: 25px;
@@ -190,7 +206,7 @@ TAB
     left: -10px;
     height: 25px;
     width: 25px;
-    color: $tertiary-text-color;
+    color: $secondary-text-color;
     padding: 5px;
     border-radius: 50%;
     background-color: $primary-color;
@@ -202,7 +218,6 @@ TAB
     width: 30%;
     display: flex;
     justify-content: center;
-    color: $tertiary-background;
     font-size: 1.4em;
   }
   .tab__text {
@@ -274,7 +289,6 @@ FOOTER
 ========================================================================== */
 .footer {
   padding: $p-20;
-  background-color: $tertiary-background;
   .footer__logo-container {
     width: 30%;
     .footer__logo {
