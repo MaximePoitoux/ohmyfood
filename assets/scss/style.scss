@@ -11,8 +11,18 @@
 }
 
 @font-face {
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: "Roboto-bold";
+}
+
+@font-face {
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
-  font-family: "Roboto";
+  font-family: "Roboto-regular";
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Thin.ttf") format("truetype");
+  font-family: "Roboto-thin";
 }
 
 // COLORS
@@ -31,6 +41,16 @@ $tertiary-background: #353535;
 $primary-text-color: black;
 $secondary-text-color: #7f8c8d;
 $tertiary-text-color: white;
+
+// LINEAR GRADIENT
+$linear-gradient: linear-gradient(
+  to bottom,
+  #ff79da,
+  #e86edb,
+  #cf64dc,
+  #b35cdc,
+  #9356dc
+);
 
 // PADDING
 $p-20: 20px;
@@ -54,8 +74,12 @@ h1 {
   font-size: 1.6em;
 }
 
+h2 {
+  font-family: "Roboto-regular", "sans-serif";
+}
+
 p {
-  font-family: "Roboto", "sans-serif";
+  font-family: "Roboto-thin", "sans-serif";
   font-size: 1em;
 }
 
@@ -90,9 +114,6 @@ p {
   .location__icon {
     margin-right: 10px;
   }
-
-  .location__text {
-  }
 }
 
 // INTRODUCTION
@@ -110,8 +131,8 @@ p {
 
   .introduction__text {
     text-align: center;
-    color: $secondary-text-color;
     margin: 20px 0;
+    font-weight: bold;
   }
 
   .introduction__btn {
@@ -122,14 +143,7 @@ p {
     border-radius: 25px;
     font-size: 1em;
     color: $tertiary-text-color;
-    background-image: linear-gradient(
-      to bottom,
-      #ff79da,
-      #e86edb,
-      #cf64dc,
-      #b35cdc,
-      #9356dc
-    );
+    background-image: $linear-gradient;
   }
 }
 
@@ -184,7 +198,65 @@ p {
     width: 70%;
     display: flex;
     justify-content: flex-start;
-    color: $primary-text-color;
+  }
+}
+
+// CARD
+.card {
+  background-color: white;
+  border-radius: 12px;
+  margin: 20px 0;
+
+  .card__container-img {
+    height: 180px;
+    position: relative;
+    border-radius: inherit;
+  }
+
+  .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  .card__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8em;
+    margin: 15px;
+    padding: 6px;
+    background-color: #99e2d0;
+    color: #008766;
+    font-family: "Roboto-regular";
+    border-radius: 2px;
+  }
+
+  .card__content {
+    display: flex;
+  }
+
+  .card__text {
+    width: 80%;
+    padding: 15px;
+  }
+
+  .card__title {
+    font-family: "Roboto-bold";
+    margin-bottom: 4px;
+  }
+
+  .card__favorite {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .fa-heart {
+      font-size: 1.4em;
+    }
   }
 }
 
