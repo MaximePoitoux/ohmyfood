@@ -74,7 +74,8 @@ h1 {
   font-size: 1.6em;
 }
 
-h2 {
+h2,
+a {
   font-family: "Roboto-regular", "sans-serif";
 }
 
@@ -263,6 +264,43 @@ p {
     .fa-heart {
       font-size: 1.4em;
     }
+  }
+}
+
+// FOOTER
+.footer {
+  padding: $p-20;
+  background-color: $tertiary-background;
+
+  .footer__logo-container {
+    width: 30%;
+
+    .footer__logo {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg)
+        brightness(103%) contrast(101%);
+    }
+  }
+
+  .footer__links-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .footer__link-container {
+    margin: 4px 0;
+    .footer__icon {
+      color: white;
+      margin-right: 2px;
+      font-size: 0.8em;
+      width: 20px;
+    }
+  }
+
+  .footer__link {
+    text-decoration: none;
+    color: white;
+    margin: 4px 0;
   }
 }
 

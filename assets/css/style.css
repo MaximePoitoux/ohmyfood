@@ -110,7 +110,8 @@ h1 {
   font-size: 1.6em;
 }
 
-h2 {
+h2,
+a {
   font-family: "Roboto-regular", "sans-serif";
 }
 
@@ -269,6 +270,36 @@ p {
 }
 .card .card__favorite .fa-heart {
   font-size: 1.4em;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #353535;
+}
+.footer .footer__logo-container {
+  width: 30%;
+}
+.footer .footer__logo-container .footer__logo {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg) brightness(103%) contrast(101%);
+}
+.footer .footer__links-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.footer .footer__link-container {
+  margin: 4px 0;
+}
+.footer .footer__link-container .footer__icon {
+  color: white;
+  margin-right: 2px;
+  font-size: 0.8em;
+  width: 20px;
+}
+.footer .footer__link {
+  text-decoration: none;
+  color: white;
+  margin: 4px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
