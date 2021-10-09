@@ -1,3 +1,7 @@
+/* METHODOLOGY BEM & SASS */
+/* ========================================================================== 
+IMPORT
+========================================================================== */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -76,6 +80,9 @@ th {
   padding: 0;
 }
 
+/* ========================================================================== 
+GOOGLE FONT
+========================================================================== */
 @font-face {
   src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
   font-family: "Shrikhand";
@@ -92,16 +99,33 @@ th {
   src: url("../fonts/Roboto-Thin.ttf") format("truetype");
   font-family: "Roboto-thin";
 }
+/* ========================================================================== 
+VARIABLES SASS
+========================================================================== */
+/* ========================================================================== 
+HERITAGE (@extend)
+========================================================================== */
+.card, .tab {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover, .tab:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================================================== 
+SEMANTIC ELEMENTS
+========================================================================== */
 body {
   background: white;
 }
 
-section:nth-of-type(1),
-section:nth-of-type(2) {
+section:nth-of-type(2),
+section:nth-of-type(3) {
   padding: 20px;
 }
 
-section:nth-of-type(2) {
+section:nth-of-type(3) {
   background-color: #f6f6f6;
 }
 
@@ -120,6 +144,9 @@ p {
   font-size: 1em;
 }
 
+/* ========================================================================== 
+HEADER
+========================================================================== */
 .header {
   display: flex;
   justify-content: center;
@@ -129,14 +156,9 @@ p {
   width: 60%;
 }
 
-.card, .tab {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card:hover, .tab:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
+/* ========================================================================== 
+LOCATION
+========================================================================== */
 .location {
   background-color: #eaeaea;
   display: flex;
@@ -148,6 +170,9 @@ p {
   margin-right: 10px;
 }
 
+/* ========================================================================== 
+INTRODUCTION
+========================================================================== */
 .introduction {
   padding: 20px;
   background-color: #f6f6f6;
@@ -175,6 +200,9 @@ p {
   background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
 }
 
+/* ========================================================================== 
+TAB
+========================================================================== */
 .tab {
   cursor: pointer;
   position: relative;
@@ -222,12 +250,15 @@ p {
   justify-content: flex-start;
 }
 
+/* ========================================================================== 
+CARD
+========================================================================== */
 .card {
   background-color: white;
   border-radius: 12px;
   margin: 20px 0;
 }
-.card .card__container-img {
+.card .card__img-container {
   height: 180px;
   position: relative;
   border-radius: inherit;
@@ -272,6 +303,9 @@ p {
   font-size: 1.4em;
 }
 
+/* ========================================================================== 
+FOOTER
+========================================================================== */
 .footer {
   padding: 20px;
   background-color: #353535;
@@ -301,5 +335,9 @@ p {
   color: white;
   margin: 4px 0;
 }
+
+/* ========================================================================== 
+MEDIA QUERIES
+========================================================================== */
 
 /*# sourceMappingURL=style.css.map */
