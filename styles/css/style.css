@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* METHODOLOGY BEM & SASS  */
 /* How to Set Your Project Up With Sass => https://dev.to/darnocer/how-to-setup-your-project-with-sass-scss-ip4 */
 /* ========================================================================== 
@@ -104,9 +105,23 @@ GOOGLE FONT
 VARIABLES SASS
 ========================================================================== */
 /* ========================================================================== 
-HERITAGE (@extend) SASS
+MIXINS SASS => Les mixins se compilent en ensembles de règles dupliqués
 ========================================================================== */
-.card, .tag {
+/* ========================================================================== 
+EXTENSIONS (@extend) SASS => Les extensions se compilent en sélecteurs dupliqués. 
+On peut utiliser des placeholders d’ensembles de règles en préfixant leur nom d’un symbole pourcent (%) : %extend-placeholder  .
+========================================================================== */
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__icon, .tag, .introduction__btn {
+  cursor: pointer;
+}
+
+.tag {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -174,6 +189,7 @@ HEADER
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 30px;
 }
 .header__logo {
@@ -197,11 +213,11 @@ LOCATION
 INTRODUCTION
 ========================================================================== */
 .introduction {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 .introduction__title {
   text-align: center;
@@ -211,7 +227,6 @@ INTRODUCTION
   margin: 20px 0;
 }
 .introduction__btn {
-  cursor: pointer;
   padding: 16px;
   margin: 20px;
   border: none;
@@ -225,14 +240,14 @@ INTRODUCTION
 tag
 ========================================================================== */
 .tag {
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   transition: 0.3s;
   padding: 22px 0;
   margin: 25px 0;
   border-radius: 25px;
-  display: flex;
-  align-items: center;
 }
 .tag:hover {
   background-color: #e9ddf8;
@@ -245,6 +260,9 @@ tag
   color: #9356dc;
 }
 .tag__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: -10px;
   height: 25px;
@@ -253,20 +271,16 @@ tag
   padding: 5px;
   border-radius: 50%;
   background-color: #9356dc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .tag__icon {
-  width: 30%;
   display: flex !important;
   justify-content: center;
+  align-items: center;
+  width: 30%;
   font-size: 1.4em;
 }
 .tag__title {
   width: 70%;
-  display: flex;
-  justify-content: flex-start;
 }
 
 /* ========================================================================== 
@@ -276,6 +290,7 @@ CARD
   background-color: white;
   border-radius: 12px;
   margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .card__thumbnail {
   height: 180px;
@@ -283,9 +298,6 @@ CARD
   border-radius: inherit;
 }
 .card__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
 }
@@ -303,6 +315,8 @@ CARD
 }
 .card__content {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card__content-text {
   width: 80%;
@@ -313,13 +327,12 @@ CARD
   margin-bottom: 4px;
 }
 .card__content-icon {
-  width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 20%;
 }
 .card__icon {
-  cursor: pointer;
   font-size: 1.4em;
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1px;
@@ -350,6 +363,8 @@ FOOTER
 .footer__content-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 10px;
 }
 .footer__content-link {
