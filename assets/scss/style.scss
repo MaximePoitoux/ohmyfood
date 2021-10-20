@@ -89,7 +89,7 @@ LOOPS SASS
 @each $color, $hex in $bg-colors {
   .introduction--#{$color},
   .location--#{$color},
-  .tab--#{$color},
+  .tag--#{$color},
   .restaurants--#{$color},
   .footer--darkgrey {
     background-color: $hex;
@@ -130,7 +130,7 @@ HEADER
   display: flex;
   justify-content: center;
   padding: 30px;
-  .header__logo {
+  &__logo {
     width: 60%;
   }
 }
@@ -143,7 +143,7 @@ LOCATION
   justify-content: center;
   align-items: center;
   padding: $p-20;
-  .location__icon {
+  &__icon {
     margin-right: 10px;
   }
 }
@@ -157,15 +157,14 @@ INTRODUCTION
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .introduction__title {
+  &__title {
     text-align: center;
   }
-  .introduction__text {
+  &__desc {
     text-align: center;
     margin: 20px 0;
-    font-weight: bold;
   }
-  .introduction__btn {
+  &__btn {
     cursor: pointer;
     padding: 16px;
     margin: 20px;
@@ -178,9 +177,9 @@ INTRODUCTION
 }
 
 /* ========================================================================== 
-TAB
+tag
 ========================================================================== */
-.tab {
+.tag {
   @extend %shadow;
   cursor: pointer;
   position: relative;
@@ -197,11 +196,11 @@ TAB
   &:focus {
     background-color: lighten($primary-color, 32);
     outline: none;
-    .tab__icon {
+    .tag__icon {
       color: $primary-color;
     }
   }
-  .tab__badge {
+  &__badge {
     position: absolute;
     left: -10px;
     height: 25px;
@@ -214,13 +213,13 @@ TAB
     justify-content: center;
     align-items: center;
   }
-  .tab__icon {
+  &__icon {
     width: 30%;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     font-size: 1.4em;
   }
-  .tab__text {
+  &__title {
     width: 70%;
     display: flex;
     justify-content: flex-start;
@@ -238,19 +237,19 @@ CARD
   &:hover {
     @extend %shadow-hover;
   }
-  .card__img-container {
+  &__thumbnail {
     height: 180px;
     position: relative;
     border-radius: inherit;
   }
-  .card__img {
+  &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
   }
-  .card__badge {
+  &__badge {
     position: absolute;
     top: 0;
     right: 0;
@@ -262,37 +261,37 @@ CARD
     font-family: "Roboto-regular";
     border-radius: 2px;
   }
-  .card__content {
+  &__content {
     display: flex;
   }
-  .card__text {
+  &__content-text {
     width: 80%;
     padding: 15px;
   }
-  .card__title {
+  &__title {
     font-family: "Roboto-bold";
     margin-bottom: 4px;
   }
-  .card__favorite {
+  &__content-icon {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    .fa-heart {
-      cursor: pointer;
-      font-size: 1.4em;
-      -webkit-text-fill-color: white;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
-      &:hover {
-        background: $linear-gradient-heart;
-        -webkit-text-stroke-width: 0px;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -moz-text-fill-color: transparent;
-        -webkit-text-fill-color: transparent;
-      }
+  }
+  &__icon {
+    cursor: pointer;
+    font-size: 1.4em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    &:hover {
+      background: $linear-gradient-heart;
+      -webkit-text-stroke-width: 0px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
@@ -302,28 +301,28 @@ FOOTER
 ========================================================================== */
 .footer {
   padding: $p-20;
-  .footer__logo-container {
+  &__content-logo {
     width: 30%;
-    .footer__logo {
-      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg)
-        brightness(103%) contrast(101%);
-    }
   }
-  .footer__links-container {
+  &__logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg)
+      brightness(103%) contrast(101%);
+  }
+  &__content-text {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
   }
-  .footer__link-container {
+  &__content-link {
     margin: 4px 0;
-    .footer__icon {
-      color: white;
-      margin-right: 2px;
-      font-size: 0.8em;
-      width: 20px;
-    }
   }
-  .footer__link {
+  &__icon {
+    color: white;
+    margin-right: 2px;
+    font-size: 0.8em;
+    width: 20px;
+  }
+  &__link {
     text-decoration: none;
     color: white;
     margin: 4px 0;
@@ -333,7 +332,7 @@ FOOTER
 /* ========================================================================== 
 MEDIA QUERIES
 ========================================================================== */
-// @media #{$tablet} {
+// @media #{$taglet} {
 // }
 
 // @media #{$desktop} {
