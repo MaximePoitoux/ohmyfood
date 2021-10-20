@@ -1,4 +1,5 @@
-/* METHODOLOGY BEM & SASS */
+/* METHODOLOGY BEM & SASS  */
+/* How to Set Your Project Up With Sass => https://dev.to/darnocer/how-to-setup-your-project-with-sass-scss-ip4 */
 /* ========================================================================== 
 IMPORT
 ========================================================================== */
@@ -84,19 +85,19 @@ th {
 GOOGLE FONT
 ========================================================================== */
 @font-face {
-  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Shrikhand-Regular.ttf") format("truetype");
   font-family: "Shrikhand";
 }
 @font-face {
-  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-family: "Roboto-bold";
 }
 @font-face {
-  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-family: "Roboto-regular";
 }
 @font-face {
-  src: url("../fonts/Roboto-Thin.ttf") format("truetype");
+  src: url("../../assets/fonts/Roboto-Thin.ttf") format("truetype");
   font-family: "Roboto-thin";
 }
 /* ========================================================================== 
@@ -240,7 +241,7 @@ tag
   background-color: #e9ddf8;
   outline: none;
 }
-.tag:focus .tag__icon {
+.tag:focus.tag__icon {
   color: #9356dc;
 }
 .tag__badge {
@@ -296,7 +297,7 @@ CARD
   margin: 15px;
   padding: 6px;
   background-color: #99e2d0;
-  color: #008766;
+  color: #278870;
   font-family: "Roboto-regular";
   border-radius: 2px;
 }
