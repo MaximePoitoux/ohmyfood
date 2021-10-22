@@ -16,7 +16,6 @@ IMPORT
 @import "base/base";
 @import "base/reset";
 @import "base/typography";
-@import "base/responsive";
 
 /* COMPONENTS */
 @import "components/card";
@@ -27,6 +26,9 @@ IMPORT
 /* LAYOUT */
 @import "layout/header";
 @import "layout/footer";
+@import "layout/operation-section";
+@import "layout/restaurants-section";
+@import "layout/card-container";
 
 /* PAGES */
 @import "pages/home";

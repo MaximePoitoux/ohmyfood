@@ -1,7 +1,7 @@
 /* ========================================================================== 
 SEMANTIC ELEMENTS
 ========================================================================== */
-@use "../utils/variables.scss" as v;
+@use "../utils/variables" as v;
 
 body {
   background: white;
@@ -14,7 +14,7 @@ section:nth-of-type(3) {
 
 h1 {
   font-family: "Shrikhand", "sans-serif";
-  font-size: 1.6em !important;
+  font-size: map-get(v.$font-size, section-heading) !important;
 }
 
 h2,
@@ -24,5 +24,5 @@ a {
 
 p {
   font-family: "Roboto-thin", "sans-serif";
-  font-size: 1em;
+  font-size: map-get(v.$font-size, paragraph);
 }

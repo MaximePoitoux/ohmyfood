@@ -1,9 +1,9 @@
 /* ========================================================================== 
 LABEL
 ========================================================================== */
-@use "../utils/variables.scss" as v;
-@use "../utils/mixins.scss" as m;
-@use "../utils/extensions.scss";
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+@use "../utils/extensions";
 
 .label {
   @include m.row-center();
@@ -39,7 +39,7 @@ LABEL
   &__icon {
     @include m.row-center(!important);
     width: 30%;
-    font-size: 1.4em;
+    font-size: map-get(v.$font-size, label-icon);
   }
   &__title {
     width: 70%;

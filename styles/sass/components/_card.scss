@@ -1,9 +1,9 @@
 /* ========================================================================== 
 CARD
 ========================================================================== */
-@use "../utils/variables.scss" as v;
-@use "../utils/mixins.scss" as m;
-@use "../utils/extensions.scss";
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+@use "../utils/extensions";
 
 .card {
   @include m.card-properties();
@@ -25,7 +25,7 @@ CARD
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 0.8em;
+    font-size: map-get(v.$font-size, card-badge);
     margin: 15px;
     padding: 6px;
     background-color: v.$tertiary-color;
@@ -50,7 +50,7 @@ CARD
   }
   &__icon {
     @extend %cursor-pointer;
-    font-size: 1.4em;
+    font-size: map-get(v.$font-size, card-icon);
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
@@ -63,5 +63,9 @@ CARD
       -moz-text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
     }
+  }
+  @media #{v.$media-tablet} {
+    width: calc(50% - 20px);
+    margin: 20px 10px;
   }
 }

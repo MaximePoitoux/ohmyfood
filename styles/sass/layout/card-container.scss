@@ -1,0 +1,8 @@
+@use "../utils/variables" as r;
+
+.card-container {
+  @media #{r.$media-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

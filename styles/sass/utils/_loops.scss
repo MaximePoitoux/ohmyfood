@@ -1,7 +1,7 @@
 /* ========================================================================== 
 LOOPS SASS
 ========================================================================== */
-@use "./variables.scss";
+@use "./variables";
 
 @each $color, $hex in variables.$bg-colors {
   .introduction--#{$color},

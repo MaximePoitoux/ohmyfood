@@ -1,9 +1,9 @@
 /* ========================================================================== 
 INTRODUCTION
 ========================================================================== */
-@use "../utils/variables.scss" as v;
-@use "../utils/mixins.scss" as m;
-@use "../utils/extensions.scss";
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+@use "../utils/extensions";
 
 .introduction {
   @include m.column-center();
@@ -21,7 +21,7 @@ INTRODUCTION
     margin: 20px;
     border: none;
     border-radius: 25px;
-    font-size: 1em;
+    font-size: map-get(v.$font-size, btn-text);
     color: v.$secondary-text-color;
     background-image: v.$linear-gradient-btn;
   }

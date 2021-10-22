@@ -2,6 +2,24 @@
 VARIABLES SASS
 ========================================================================== */
 
+// font-size => MAPS
+$font-size: (
+  section-heading: 1.6em,
+  card-icon: 1.4em,
+  label-icon: 1.4em,
+  paragraph: 1em,
+  btn-text: 1em,
+  card-badge: 0.8em,
+  footer-icon: 0.8em,
+);
+
+// backgrounds => MAPS
+$bg-colors: (
+  "lightgrey": #f6f6f6,
+  "grey": #eaeaea,
+  "darkgrey": #353535,
+);
+
 // colors
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
@@ -10,13 +28,6 @@ $tertiary-color: #99e2d0;
 // text-colors
 $primary-text-color: black;
 $secondary-text-color: white;
-
-// backgrounds
-$bg-colors: (
-  "lightgrey": #f6f6f6,
-  "grey": #eaeaea,
-  "darkgrey": #353535,
-);
 
 // linear-gradient
 $linear-gradient-btn: linear-gradient(
@@ -39,3 +50,17 @@ $linear-gradient-heart: linear-gradient(
 
 // padding
 $p-20: 20px;
+
+// media queries
+$media-tablet: "only screen and (min-width: 499px)";
+$media-desktop: "only screen and (min-width: 1140px)";
+$media-xl-desktop: "only screen and (min-width: 1500px)";
+
+// @media #{$tablet} {
+// }
+
+// @media #{$desktop} {
+// }
+
+// @media #{xl-desktop} {
+// }

@@ -1,8 +1,8 @@
 /* ========================================================================== 
 FOOTER
 ========================================================================== */
-@use "../utils/variables.scss" as v;
-@use "../utils/mixins.scss" as m;
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
 
 .footer {
   padding: v.$p-20;
@@ -23,7 +23,7 @@ FOOTER
   &__icon {
     color: white;
     margin-right: 2px;
-    font-size: 0.8em;
+    font-size: nth(v.$font-size, 4);
     width: 20px;
   }
   &__link {

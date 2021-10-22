@@ -1,0 +1,8 @@
+@use "../utils/variables" as r;
+
+.restaurants-section {
+  @media #{r.$media-tablet} {
+    display: flex;
+    flex-direction: column;
+  }
+}
