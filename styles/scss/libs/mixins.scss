@@ -1,0 +1,30 @@
+/* ========================================================================== 
+MIXINS SASS => Les mixins se compilent en ensembles de règles dupliqués
+========================================================================== */
+
+@mixin card-properties {
+  background-color: white;
+  border-radius: 12px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@mixin row-center($important: ()) {
+  display: flex $important;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin column-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}

@@ -1,0 +1,14 @@
+/* ========================================================================== 
+LOOPS SASS
+========================================================================== */
+@use "./variables.scss";
+
+@each $color, $hex in variables.$bg-colors {
+  .introduction--#{$color},
+  .location--#{$color},
+  .label--#{$color},
+  .restaurants--#{$color},
+  .footer--darkgrey {
+    background-color: $hex;
+  }
+}

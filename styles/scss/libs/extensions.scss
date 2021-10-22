@@ -1,0 +1,22 @@
+/* ========================================================================== 
+EXTENSIONS (@extend) SASS => Les extensions se compilent en sélecteurs dupliqués. 
+On peut utiliser des placeholders d’ensembles de règles en préfixant leur nom d’un symbole pourcent (%) : %extend-placeholder  .
+========================================================================== */
+
+%img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+%cursor-pointer {
+  cursor: pointer;
+}
+
+%shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+%shadow-hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}

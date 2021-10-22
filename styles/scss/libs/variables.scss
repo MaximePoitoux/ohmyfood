@@ -1,0 +1,41 @@
+/* ========================================================================== 
+VARIABLES SASS
+========================================================================== */
+
+// colors
+$primary-color: #9356dc;
+$secondary-color: #ff79da;
+$tertiary-color: #99e2d0;
+
+// text-colors
+$primary-text-color: black;
+$secondary-text-color: white;
+
+// backgrounds
+$bg-colors: (
+  "lightgrey": #f6f6f6,
+  "grey": #eaeaea,
+  "darkgrey": #353535,
+);
+
+// linear-gradient
+$linear-gradient-btn: linear-gradient(
+  to bottom,
+  #ff79da,
+  #e86edb,
+  #cf64dc,
+  #b35cdc,
+  #9356dc
+);
+
+$linear-gradient-heart: linear-gradient(
+  to top,
+  #ff79da,
+  #e86edb,
+  #cf64dc,
+  #b35cdc,
+  #9356dc
+);
+
+// padding
+$p-20: 20px;
