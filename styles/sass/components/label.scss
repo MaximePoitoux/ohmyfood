@@ -1,0 +1,47 @@
+/* ========================================================================== 
+LABEL
+========================================================================== */
+@use "../utils/variables.scss" as v;
+@use "../utils/mixins.scss" as m;
+@use "../utils/extensions.scss";
+
+.label {
+  @include m.row-center();
+  @extend %cursor-pointer;
+  @extend %shadow;
+  position: relative;
+  transition: 0.3s;
+  padding: 22px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+  &:hover {
+    @extend %shadow-hover;
+    background-color: lighten(v.$primary-color, 32);
+  }
+  &:focus {
+    background-color: lighten(v.$primary-color, 32);
+    outline: none;
+    &.label__icon {
+      color: v.$primary-color;
+    }
+  }
+  &__badge {
+    @include m.row-center();
+    position: absolute;
+    left: -10px;
+    height: 25px;
+    width: 25px;
+    color: v.$secondary-text-color;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: v.$primary-color;
+  }
+  &__icon {
+    @include m.row-center(!important);
+    width: 30%;
+    font-size: 1.4em;
+  }
+  &__title {
+    width: 70%;
+  }
+}

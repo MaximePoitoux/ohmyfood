@@ -1,0 +1,13 @@
+/* ========================================================================== 
+LOCATION
+========================================================================== */
+@use "../utils/variables.scss" as v;
+@use "../utils/mixins.scss" as m;
+
+.location {
+  @include m.row-center();
+  padding: v.$p-20;
+  &__icon {
+    margin-right: 10px;
+  }
+}

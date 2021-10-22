@@ -1,4 +1,34 @@
 @charset "UTF-8";
+/* ========================================================================== 
+VARIABLES SASS
+========================================================================== */
+/* ========================================================================== 
+SEMANTIC ELEMENTS
+========================================================================== */
+body {
+  background: white;
+}
+
+section:nth-of-type(2),
+section:nth-of-type(3) {
+  padding: 20px;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.6em !important;
+}
+
+h2,
+a {
+  font-family: "Roboto-regular", "sans-serif";
+}
+
+p {
+  font-family: "Roboto-thin", "sans-serif";
+  font-size: 1em;
+}
+
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -78,8 +108,24 @@ th {
 }
 
 /* ========================================================================== 
-VARIABLES SASS
+GOOGLE FONT
 ========================================================================== */
+@font-face {
+  src: url("../../assets/fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Shrikhand";
+}
+@font-face {
+  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: "Roboto-bold";
+}
+@font-face {
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto-regular";
+}
+@font-face {
+  src: url("../../assets/fonts/Roboto-Thin.ttf") format("truetype");
+  font-family: "Roboto-thin";
+}
 /* ========================================================================== 
 MIXINS SASS => Les mixins se compilent en ensembles de règles dupliqués
 ========================================================================== */
@@ -93,7 +139,7 @@ On peut utiliser des placeholders d’ensembles de règles en préfixant leur no
   object-fit: cover;
 }
 
-.introduction__btn, .label, .card__icon {
+.label, .introduction__btn, .card__icon {
   cursor: pointer;
 }
 
@@ -135,57 +181,6 @@ LOOPS SASS
 /* ========================================================================== 
 CONDITIONS SASS
 ========================================================================== */
-/* METHODOLOGY BEM & SASS  */
-/* How to Set Your Project Up With Sass => https://dev.to/darnocer/how-to-setup-your-project-with-sass-scss-ip4 */
-/* ========================================================================== 
-IMPORT
-========================================================================== */
-/* ========================================================================== 
-GOOGLE FONT
-========================================================================== */
-@font-face {
-  src: url("../../assets/fonts/Shrikhand-Regular.ttf") format("truetype");
-  font-family: "Shrikhand";
-}
-@font-face {
-  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
-  font-family: "Roboto-bold";
-}
-@font-face {
-  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
-  font-family: "Roboto-regular";
-}
-@font-face {
-  src: url("../../assets/fonts/Roboto-Thin.ttf") format("truetype");
-  font-family: "Roboto-thin";
-}
-/* ========================================================================== 
-SEMANTIC ELEMENTS
-========================================================================== */
-body {
-  background: white;
-}
-
-section:nth-of-type(2),
-section:nth-of-type(3) {
-  padding: 20px;
-}
-
-h1 {
-  font-family: "Shrikhand", "sans-serif";
-  font-size: 1.6em;
-}
-
-h2,
-a {
-  font-family: "Roboto-regular", "sans-serif";
-}
-
-p {
-  font-family: "Roboto-thin", "sans-serif";
-  font-size: 1em;
-}
-
 /* ========================================================================== 
 HEADER
 ========================================================================== */
@@ -200,90 +195,37 @@ HEADER
 }
 
 /* ========================================================================== 
-LOCATION
+FOOTER
 ========================================================================== */
-.location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer {
   padding: 20px;
 }
-.location__icon {
-  margin-right: 10px;
+.footer__content-logo {
+  width: 30%;
 }
-
-/* ========================================================================== 
-INTRODUCTION
-========================================================================== */
-.introduction {
+.footer__logo {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg) brightness(103%) contrast(101%);
+}
+.footer__content-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  margin-top: 10px;
 }
-.introduction__title {
-  text-align: center;
+.footer__content-link {
+  margin: 4px 0;
 }
-.introduction__desc {
-  text-align: center;
-  margin: 20px 0;
-}
-.introduction__btn {
-  padding: 16px;
-  margin: 20px;
-  border: none;
-  border-radius: 25px;
-  font-size: 1em;
+.footer__icon {
   color: white;
-  background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
+  margin-right: 2px;
+  font-size: 0.8em;
+  width: 20px;
 }
-
-/* ========================================================================== 
-label
-========================================================================== */
-.label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  transition: 0.3s;
-  padding: 22px 0;
-  margin: 25px 0;
-  border-radius: 25px;
-}
-.label:hover {
-  background-color: #e9ddf8;
-}
-.label:focus {
-  background-color: #e9ddf8;
-  outline: none;
-}
-.label:focus.label__icon {
-  color: #9356dc;
-}
-.label__badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: -10px;
-  height: 25px;
-  width: 25px;
+.footer__link {
+  text-decoration: none;
   color: white;
-  padding: 5px;
-  border-radius: 50%;
-  background-color: #9356dc;
-}
-.label__icon {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  font-size: 1.4em;
-}
-.label__title {
-  width: 70%;
+  margin: 4px 0;
 }
 
 /* ========================================================================== 
@@ -352,41 +294,99 @@ CARD
 }
 
 /* ========================================================================== 
-FOOTER
+LOCATION
 ========================================================================== */
-.footer {
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
-.footer__content-logo {
-  width: 30%;
+.location__icon {
+  margin-right: 10px;
 }
-.footer__logo {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg) brightness(103%) contrast(101%);
-}
-.footer__content-text {
+
+/* ========================================================================== 
+INTRODUCTION
+========================================================================== */
+.introduction {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 10px;
+  align-items: center;
+  padding: 20px;
 }
-.footer__content-link {
-  margin: 4px 0;
+.introduction__title {
+  text-align: center;
 }
-.footer__icon {
+.introduction__desc {
+  text-align: center;
+  margin: 20px 0;
+}
+.introduction__btn {
+  padding: 16px;
+  margin: 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
   color: white;
-  margin-right: 2px;
-  font-size: 0.8em;
-  width: 20px;
+  background-image: linear-gradient(to bottom, #ff79da, #e86edb, #cf64dc, #b35cdc, #9356dc);
 }
-.footer__link {
-  text-decoration: none;
+
+/* ========================================================================== 
+LABEL
+========================================================================== */
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.3s;
+  padding: 22px 0;
+  margin: 25px 0;
+  border-radius: 25px;
+}
+.label:hover {
+  background-color: #e9ddf8;
+}
+.label:focus {
+  background-color: #e9ddf8;
+  outline: none;
+}
+.label:focus.label__icon {
+  color: #9356dc;
+}
+.label__badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  height: 25px;
+  width: 25px;
   color: white;
-  margin: 4px 0;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #9356dc;
+}
+.label__icon {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  font-size: 1.4em;
+}
+.label__title {
+  width: 70%;
 }
 
 /* ========================================================================== 
 MEDIA QUERIES
+========================================================================== */
+/* METHODOLOGY BEM & SASS  */
+/* How to Set Your Project Up With Sass => https://dev.to/darnocer/how-to-setup-your-project-with-sass-scss-ip4 */
+/* ========================================================================== 
+IMPORT
 ========================================================================== */
 
 /*# sourceMappingURL=style.css.map */

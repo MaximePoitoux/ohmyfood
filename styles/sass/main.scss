@@ -1,0 +1,25 @@
+/* METHODOLOGY BEM & SASS  */
+/* How to Set Your Project Up With Sass => https://dev.to/darnocer/how-to-setup-your-project-with-sass-scss-ip4 */
+
+/* ========================================================================== 
+IMPORT
+========================================================================== */
+@use "base/base.scss";
+@use "base/reset.scss";
+@use "base/typography.scss";
+
+@use "utils/variables.scss" as v;
+@use "utils/mixins.scss" as m;
+@use "utils/extensions.scss";
+@use "utils/loops.scss";
+@use "utils/conditions.scss";
+
+@use "layout/header.scss";
+@use "layout/footer.scss";
+
+@use "components/card.scss";
+@use "components/location.scss";
+@use "components/introduction.scss";
+@use "components/label.scss";
+
+@use "base/responsive.scss";

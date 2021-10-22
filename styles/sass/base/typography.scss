@@ -1,0 +1,25 @@
+/* ========================================================================== 
+GOOGLE FONT
+========================================================================== */
+
+// https://stackoverflow.com/questions/4872592/use-multiple-font-face-rules-in-css
+
+@font-face {
+  src: url("../../assets/fonts/Shrikhand-Regular.ttf") format("truetype");
+  font-family: "Shrikhand";
+}
+
+@font-face {
+  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-family: "Roboto-bold";
+}
+
+@font-face {
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-family: "Roboto-regular";
+}
+
+@font-face {
+  src: url("../../assets/fonts/Roboto-Thin.ttf") format("truetype");
+  font-family: "Roboto-thin";
+}

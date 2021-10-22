@@ -1,0 +1,28 @@
+/* ========================================================================== 
+INTRODUCTION
+========================================================================== */
+@use "../utils/variables.scss" as v;
+@use "../utils/mixins.scss" as m;
+@use "../utils/extensions.scss";
+
+.introduction {
+  @include m.column-center();
+  padding: v.$p-20;
+  &__title {
+    text-align: center;
+  }
+  &__desc {
+    text-align: center;
+    margin: 20px 0;
+  }
+  &__btn {
+    @extend %cursor-pointer;
+    padding: 16px;
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    color: v.$secondary-text-color;
+    background-image: v.$linear-gradient-btn;
+  }
+}

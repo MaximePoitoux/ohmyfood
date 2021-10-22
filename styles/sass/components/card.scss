@@ -1,0 +1,67 @@
+/* ========================================================================== 
+CARD
+========================================================================== */
+@use "../utils/variables.scss" as v;
+@use "../utils/mixins.scss" as m;
+@use "../utils/extensions.scss";
+
+.card {
+  @include m.card-properties();
+  // @extend %shadow;
+  &:hover {
+    @extend %shadow-hover;
+  }
+  &__thumbnail {
+    height: 180px;
+    position: relative;
+    border-radius: inherit;
+  }
+  &__img {
+    @extend %img-cover;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+  &__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.8em;
+    margin: 15px;
+    padding: 6px;
+    background-color: v.$tertiary-color;
+    color: darken(v.$tertiary-color, 40%);
+    font-family: "Roboto-regular";
+    border-radius: 2px;
+  }
+  &__content {
+    @include m.row-center();
+  }
+  &__content-text {
+    width: 80%;
+    padding: 15px;
+  }
+  &__title {
+    font-family: "Roboto-bold";
+    margin-bottom: 4px;
+  }
+  &__content-icon {
+    @include m.row-center();
+    width: 20%;
+  }
+  &__icon {
+    @extend %cursor-pointer;
+    font-size: 1.4em;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    &:hover {
+      background: v.$linear-gradient-heart;
+      -webkit-text-stroke-width: 0px;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

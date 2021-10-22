@@ -1,0 +1,28 @@
+/* ========================================================================== 
+SEMANTIC ELEMENTS
+========================================================================== */
+@use "../utils/variables.scss" as v;
+
+body {
+  background: white;
+}
+
+section:nth-of-type(2),
+section:nth-of-type(3) {
+  padding: v.$p-20;
+}
+
+h1 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.6em !important;
+}
+
+h2,
+a {
+  font-family: "Roboto-regular", "sans-serif";
+}
+
+p {
+  font-family: "Roboto-thin", "sans-serif";
+  font-size: 1em;
+}
