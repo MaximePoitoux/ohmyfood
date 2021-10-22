@@ -4,22 +4,33 @@
 /* ========================================================================== 
 IMPORT
 ========================================================================== */
-@use "base/base.scss";
-@use "base/reset.scss";
-@use "base/typography.scss";
 
-@use "utils/variables.scss" as v;
-@use "utils/mixins.scss" as m;
-@use "utils/extensions.scss";
-@use "utils/loops.scss";
-@use "utils/conditions.scss";
+/* UTILS */
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/extensions";
+@import "utils/loops";
+@import "utils/conditions";
 
-@use "layout/header.scss";
-@use "layout/footer.scss";
+/* BASE */
+@import "base/base";
+@import "base/reset";
+@import "base/typography";
+@import "base/responsive";
 
-@use "components/card.scss";
-@use "components/location.scss";
-@use "components/introduction.scss";
-@use "components/label.scss";
+/* COMPONENTS */
+@import "components/card";
+@import "components/location";
+@import "components/introduction";
+@import "components/label";
 
-@use "base/responsive.scss";
+/* LAYOUT */
+@import "layout/header";
+@import "layout/footer";
+
+/* PAGES */
+@import "pages/home";
+@import "pages/menu-1";
+@import "pages/menu-2";
+@import "pages/menu-3";
+@import "pages/menu-4";
