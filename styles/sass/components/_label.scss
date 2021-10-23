@@ -35,21 +35,42 @@ LABEL
     padding: 5px;
     border-radius: 50%;
     background-color: v.$primary-color;
+    @include m.for-tablet-landscape-up {
+      top: -19px;
+      left: auto;
+      height: 30px;
+      width: 30px;
+    }
+    @include m.for-desktop-up {
+      height: 32px;
+      width: 32px;
+    }
   }
   &__icon {
     @include m.row-center(!important);
     width: 30%;
     font-size: map-get(v.$font-size, label-icon);
+    @include m.for-tablet-landscape-up {
+      width: 20%;
+      font-size: 1.4em;
+    }
+    @include m.for-desktop-up {
+      font-size: 1.6em;
+    }
   }
   &__title {
     width: 70%;
-  }
-  @include m.for-tablet-portrait-up {
-    width: calc((100% / 3) - 10px);
-    margin-right: 10px;
-    padding: 14px 0;
-    &:nth-child(3n) {
-      margin-right: 0;
+    @include m.for-tablet-landscape-up {
+      width: auto;
     }
+  }
+  @include m.for-tablet-landscape-up {
+    width: calc(100% / 3);
+    padding: 18px 0;
+    margin: 0 10px;
+  }
+  @include m.for-desktop-up {
+    padding: 22px 0;
+    margin: 0 18px;
   }
 }

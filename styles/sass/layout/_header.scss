@@ -8,5 +8,11 @@ HEADER
   padding: 30px;
   &__logo {
     width: 60%;
+    @include m.for-desktop-up {
+      width: 30%;
+    }
+  }
+  @include m.for-desktop-up {
+    padding: 40px;
   }
 }

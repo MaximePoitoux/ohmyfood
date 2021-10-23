@@ -3,7 +3,10 @@
 
 .label-container {
   @include m.for-tablet-portrait-up {
+    padding: 0 15%;
+  }
+  @include m.for-tablet-landscape-up {
     display: flex;
-    justify-content: space-between;
+    padding: 40px;
   }
 }
