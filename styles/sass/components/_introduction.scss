@@ -10,6 +10,9 @@ INTRODUCTION
   padding: v.$p-20;
   &__title {
     text-align: center;
+    @include m.for-tablet-portrait-up {
+      padding: 20px;
+    }
   }
   &__desc {
     text-align: center;

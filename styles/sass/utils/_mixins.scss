@@ -28,3 +28,34 @@ MIXINS SASS => Les mixins se compilent en ensembles de règles dupliqués
   justify-content: center;
   align-items: flex-start;
 }
+
+/* ========================================================================== 
+MEDIA QUERIES
+========================================================================== */
+// Format tablette portrait
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+// Format tablette paysage
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+// Format ordinateur
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Format extra large ordinateur
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

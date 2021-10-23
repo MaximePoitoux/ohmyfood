@@ -44,4 +44,12 @@ LABEL
   &__title {
     width: 70%;
   }
+  @include m.for-tablet-portrait-up {
+    width: calc((100% / 3) - 10px);
+    margin-right: 10px;
+    padding: 14px 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 }

@@ -64,8 +64,23 @@ CARD
       -webkit-text-fill-color: transparent;
     }
   }
-  @media #{v.$media-tablet} {
-    width: calc(50% - 20px);
-    margin: 20px 10px;
+  @include m.for-tablet-portrait-up {
+    width: calc(50% - 10px);
+    margin: 20px 10px 20px 0;
+    &:nth-child(2n) {
+      width: calc(50% - 10px);
+      margin: 20px 0px 20px 10px;
+    }
+  }
+  @include m.for-desktop-up {
+    width: calc(25% - 20px);
+    &:nth-child(2n) {
+      width: calc(25% - 20px);
+      margin: 20px 20px 20px 0;
+    }
+    &:nth-child(4n) {
+      width: calc(25% - 20px);
+      margin: 20px 0px 20px 0;
+    }
   }
 }

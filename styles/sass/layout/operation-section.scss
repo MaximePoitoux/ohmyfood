@@ -1,7 +1,0 @@
-@use "../utils/variables" as r;
-
-.operation-section {
-  @media #{r.$media-tablet} {
-    display: flex;
-  }
-}

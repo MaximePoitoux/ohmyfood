@@ -8,6 +8,11 @@ FOOTER
   padding: v.$p-20;
   &__content-logo {
     width: 30%;
+    @include m.for-tablet-portrait-up {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
   }
   &__logo {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(261deg)
@@ -16,6 +21,9 @@ FOOTER
   &__content-text {
     @include m.column-start();
     margin-top: 10px;
+    @include m.for-tablet-portrait-up {
+      align-items: center;
+    }
   }
   &__content-link {
     margin: 4px 0;
@@ -30,5 +38,10 @@ FOOTER
     text-decoration: none;
     color: white;
     margin: 4px 0;
+  }
+  @include m.for-tablet-portrait-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
