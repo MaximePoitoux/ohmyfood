@@ -26,3 +26,8 @@ p {
   font-family: "Roboto-thin", "sans-serif";
   font-size: map-get(v.$font-size, paragraph);
 }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
