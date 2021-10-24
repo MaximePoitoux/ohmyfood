@@ -15,6 +15,12 @@ MIXINS SASS => Les mixins se compilent en ensembles de règles dupliqués
   align-items: center;
 }
 
+@mixin row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @mixin column-center {
   display: flex;
   flex-direction: column;

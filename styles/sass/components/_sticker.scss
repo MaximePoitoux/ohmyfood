@@ -1,0 +1,31 @@
+/* ========================================================================== 
+STICKER
+========================================================================== */
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+@use "../utils/extensions";
+
+.sticker {
+  @include m.row-between;
+  @extend %cursor-pointer;
+  @extend %shadow;
+  background-color: #fff;
+  height: 68px;
+  padding: 12px 16px;
+  margin: 16px 0;
+  border-radius: 12px;
+  &__content-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__content-price {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+  &__price {
+    font-family: map-get(v.$font-family, bold);
+  }
+}

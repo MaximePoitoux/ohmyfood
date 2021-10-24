@@ -22,6 +22,7 @@ IMPORT
 @import "components/location";
 @import "components/introduction";
 @import "components/label";
+@import "components/sticker";
 
 /* LAYOUT */
 @import "layout/header";
@@ -29,6 +30,8 @@ IMPORT
 @import "layout/heading-section";
 @import "layout/label-container";
 @import "layout/card-container";
+@import "layout/menu";
+@import "layout/dish";
 
 /* PAGES */
 @import "pages/home";

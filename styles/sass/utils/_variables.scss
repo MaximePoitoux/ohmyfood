@@ -2,6 +2,26 @@
 VARIABLES SASS
 ========================================================================== */
 
+// font-family
+$font-family: (
+  thin: (
+    Roboto-thin,
+    sans-serif,
+  ),
+  regular: (
+    Roboto-regular,
+    sans-serif,
+  ),
+  bold: (
+    Roboto-bold,
+    sans-serif,
+  ),
+  special: (
+    Shrikhand,
+    sans-serif,
+  ),
+);
+
 // font-size => MAPS
 $font-size: (
   section-heading: 1.6em,
@@ -30,7 +50,7 @@ $primary-text-color: black;
 $secondary-text-color: white;
 
 // linear-gradient
-$linear-gradient-btn: linear-gradient(
+$linear-gradient-bottom: linear-gradient(
   to bottom,
   #ff79da,
   #e86edb,
@@ -39,8 +59,17 @@ $linear-gradient-btn: linear-gradient(
   #9356dc
 );
 
-$linear-gradient-heart: linear-gradient(
+$linear-gradient-top: linear-gradient(
   to top,
+  #ff79da,
+  #e86edb,
+  #cf64dc,
+  #b35cdc,
+  #9356dc
+);
+
+$linear-gradient-diagonal: linear-gradient(
+  to right bottom,
   #ff79da,
   #e86edb,
   #cf64dc,
