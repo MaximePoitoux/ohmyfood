@@ -7,7 +7,7 @@ CARD
 
 .card {
   @include m.card-properties();
-  // @extend %shadow;
+  @extend %shadow;
   &:hover {
     @extend %shadow-hover;
   }

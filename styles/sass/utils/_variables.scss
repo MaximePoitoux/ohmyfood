@@ -59,6 +59,16 @@ $linear-gradient-bottom: linear-gradient(
   #9356dc
 );
 
+// linear-gradient
+$linear-gradient-bottom-lighten: linear-gradient(
+  to bottom,
+  lighten(#ff79da, 5),
+  lighten(#e86edb, 5),
+  lighten(#cf64dc, 5),
+  lighten(#b35cdc, 5),
+  lighten(#9356dc, 5)
+);
+
 $linear-gradient-top: linear-gradient(
   to top,
   #ff79da,

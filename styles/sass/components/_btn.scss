@@ -3,9 +3,14 @@
 
 .btn {
   @extend %cursor-pointer;
+  @extend %shadow-btn;
   border: none;
   border-radius: 25px;
   font-size: map-get(v.$font-size, btn-text);
   color: v.$secondary-text-color;
   background-image: v.$linear-gradient-bottom;
+  &:hover {
+    @extend %shadow-btn-hover;
+    background-image: v.$linear-gradient-bottom-lighten;
+  }
 }
