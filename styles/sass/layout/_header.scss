@@ -5,7 +5,13 @@ HEADER
 
 .header {
   @include m.row-center();
+  position: relative;
   padding: 30px;
+  &__back {
+    position: absolute;
+    left: 6%;
+    font-size: 1.4em;
+  }
   &__logo {
     width: 60%;
     @include m.for-desktop-up {
