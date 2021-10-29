@@ -18,24 +18,15 @@ IMPORT
 @import "base/typography";
 
 /* COMPONENTS */
+@import "components/btn";
 @import "components/card";
-@import "components/location";
-@import "components/introduction";
 @import "components/label";
 @import "components/sticker";
 
 /* LAYOUT */
 @import "layout/header";
 @import "layout/footer";
-@import "layout/heading-section";
-@import "layout/label-container";
-@import "layout/card-container";
-@import "layout/menu";
-@import "layout/dish";
 
 /* PAGES */
 @import "pages/home";
-@import "pages/menu-1";
-@import "pages/menu-2";
-@import "pages/menu-3";
-@import "pages/menu-4";
+@import "pages/menu";

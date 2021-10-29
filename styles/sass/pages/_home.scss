@@ -1,0 +1,71 @@
+@use "../utils/variables" as v;
+@use "../utils/mixins" as m;
+@use "../utils/extensions";
+
+/* ========================================================================== 
+LOCATION
+========================================================================== */
+.location {
+  @include m.row-center();
+  padding: v.$p-20;
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+/* ========================================================================== 
+INTRODUCTION
+========================================================================== */
+.introduction {
+  @include m.column-center();
+  padding: v.$p-20;
+  &__title {
+    text-align: center;
+    @include m.for-tablet-portrait-up {
+      padding: 20px;
+    }
+  }
+  &__desc {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .btn {
+    padding: 16px;
+    margin: 20px;
+  }
+}
+
+/* ========================================================================== 
+HEADING SECTION
+========================================================================== */
+.heading-section {
+  @include m.for-tablet-portrait-up {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+/* ========================================================================== 
+LABEL CONTAINER
+========================================================================== */
+.label-container {
+  @include m.for-tablet-portrait-up {
+    padding: 0 15%;
+  }
+  @include m.for-tablet-landscape-up {
+    display: flex;
+    padding: 40px;
+  }
+}
+
+/* ========================================================================== 
+CARD CONTAINER
+========================================================================== */
+.card-container {
+  @include m.for-tablet-portrait-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

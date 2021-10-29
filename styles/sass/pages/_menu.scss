@@ -2,6 +2,9 @@
 @use "../utils/mixins" as m;
 @use "../utils/extensions";
 
+/* ========================================================================== 
+MENU
+========================================================================== */
 .menu {
   position: relative;
   height: 1425px;
@@ -32,18 +35,23 @@
       -webkit-text-fill-color: transparent;
     }
   }
-  &__btn {
+  &__btn-container {
     @include m.row-center;
     margin: 20px 0 40px 0;
-    button {
-      @extend %shadow;
-      font-size: 1em;
-      border-radius: 20px;
-      border: none;
-      color: white;
-      background-image: v.$linear-gradient-diagonal;
-      background-color: grey;
+    .btn {
       padding: 13px 33px;
     }
+  }
+}
+
+/* ========================================================================== 
+DISH
+========================================================================== */
+.dish {
+  &__title {
+    font-family: map-get(v.$font-family, thin);
+    border-bottom: solid 3px v.$tertiary-color;
+    width: 38px;
+    padding-bottom: 4px;
   }
 }

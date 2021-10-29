@@ -1,0 +1,11 @@
+@use "../utils/variables" as v;
+@use "../utils/extensions";
+
+.btn {
+  @extend %cursor-pointer;
+  border: none;
+  border-radius: 25px;
+  font-size: map-get(v.$font-size, btn-text);
+  color: v.$secondary-text-color;
+  background-image: v.$linear-gradient-bottom;
+}
